@@ -86,7 +86,7 @@ def parse_args():
 
     return args
 
-
+# /home/hangyuan/nx/code/MMCV/mmclassification/configs/resnet/resnet18_8xb32_in1k.py
 def main():
     args = parse_args()
 

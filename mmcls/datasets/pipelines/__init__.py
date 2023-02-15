@@ -20,3 +20,16 @@ __all__ = [
     'Contrast', 'Brightness', 'Sharpness', 'AutoAugment', 'SolarizeAdd',
     'Cutout', 'RandAugment', 'Lighting', 'ColorJitter', 'RandomErasing', 'Pad'
 ]
+'''
+CenterCrop 中心裁减 从中心开始 裁出指定长度宽度的图片
+ColorJitter 
+Lighting 
+Normalize
+Pad
+RandomCrop 随机裁剪
+RandomErasing
+RandomFlip
+RandomGrayscale
+RandomResizedCrop resize 和 crop组合
+Resize resize
+'''

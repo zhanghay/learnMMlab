@@ -5,7 +5,7 @@ import mmcv
 
 from mmcls.apis import inference_model, init_model, show_result_pyplot
 
-
+# 5547758_eea9edfd54_n.jpg config_resnet18_8xb32_in1k.py epoch_40.pth --show
 def main():
     parser = ArgumentParser()
     parser.add_argument('img', help='Image file')
