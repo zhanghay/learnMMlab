@@ -11,7 +11,7 @@ from mmcls.utils import load_json_log
 TEST_METRICS = ('precision', 'recall', 'f1_score', 'support', 'mAP', 'CP',
                 'CR', 'CF1', 'OP', 'OR', 'OF1', 'accuracy')
 
-
+# plot_curve ../work_dirs/resnet18_8xb32_in1k_change1/20230309_091930.log.json --keys loss --style ggplot
 def cal_train_time(log_dicts, args):
     """Compute the average time per training iteration."""
     for i, log_dict in enumerate(log_dicts):
@@ -169,7 +169,7 @@ def add_plot_parser(subparsers):
         help='size of the window to display images, in format of "$W*$H".')
 
 
-def add_time_parser(subparsers):
+def add_time_parser(subparsers):  # 时间用
     parser_time = subparsers.add_parser(
         'cal_train_time',
         help='parser for computing the average time per training iteration')

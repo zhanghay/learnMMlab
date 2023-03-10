@@ -39,7 +39,7 @@ METHOD_MAP = {
     'layercam': LayerCAM,
 }
 
-
+# /home/hangyuan/nx/code/MMCV/mmclassification/demo/5547758_eea9edfd54_n.jpg ../../configs/resnet/allinone_resnet18_8xb32_in1k.py ../work_dirs/resnet18_8xb32_in1k_change1/epoch_40.pth --save-path ../work_dirs/resnet18_8xb32_in1k_change1/visualizations/1.jpg
 def parse_args():
     parser = argparse.ArgumentParser(description='Visualize CAM')
     parser.add_argument('img', help='Image file')

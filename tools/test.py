@@ -19,8 +19,11 @@ from mmcls.utils import (auto_select_device, get_root_logger,
                          wrap_non_distributed_model)
 
 
-# ../configs/resnet/allinone_resnet18_8xb32_in1k.py work_dirs/resnet18_8xb32_in1k/epoch_40.pth --out --metrics accuracy
+# ../configs/resnet/allinone_resnet18_8xb32_in1k.py work_dirs/resnet18_8xb32_in1k/epoch_40.pth  --metrics accuracy
 # accuracy_top-1 : 82.19  accuracy_top-5 : 100.0
+# ../configs/resnet/allinone_resnet18_8xb32_in1k.py
+# work_dirs/resnet18_8xb32_in1k_change1/epoch_40.pth  --metrics accuracy
+# accuracy_top-1 : 82.29 accuracy_top-5 : 100.0
 def parse_args():
     parser = argparse.ArgumentParser(description='mmcls test model')
     parser.add_argument('config', help='test config file path')

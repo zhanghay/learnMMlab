@@ -7,6 +7,7 @@ from mmcv.cnn.utils import get_model_complexity_info
 from mmcls.models import build_classifier
 
 
+# ../../configs/resnet/allinone_resnet18_8xb32_in1k.py --shape 224 224
 def parse_args():
     parser = argparse.ArgumentParser(description='Get model flops and params')
     parser.add_argument('config', help='config file path')
@@ -21,13 +22,12 @@ def parse_args():
 
 
 def main():
-
     args = parse_args()
 
     if len(args.shape) == 1:
         input_shape = (3, args.shape[0], args.shape[0])
     elif len(args.shape) == 2:
-        input_shape = (3, ) + tuple(args.shape)
+        input_shape = (3,) + tuple(args.shape)
     else:
         raise ValueError('invalid input shape')
 
