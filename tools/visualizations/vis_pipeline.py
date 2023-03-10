@@ -23,7 +23,8 @@ bright_style, reset_style = '\x1b[1m', '\x1b[0m'
 red_text, blue_text = '\x1b[31m', '\x1b[34m'
 white_background = '\x1b[107m'
 
-
+# /home/hangyuan/nx/code/MMCV/mmclassification/configs/resnet/allinone_resnet18_8xb32_in1k.py --output-dir
+# ../work_dirs/resnet18_8xb32_in1k_change1/visualizations --phase train --number 10 --mode pipeline
 def parse_args():
     parser = argparse.ArgumentParser(
         description='Visualize a Dataset Pipeline')
