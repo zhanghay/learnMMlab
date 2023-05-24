@@ -9,9 +9,9 @@ model = dict(
     neck=dict(type='GeneralizedMeanPooling'),
     head=dict(
         type='LinearClsHead',
-        num_classes=5,
+        num_classes=12,
         in_channels=512,
-        loss=dict(type='LabelSmoothLoss', label_smooth_val=0.2, num_classes=5),
+        loss=dict(type='LabelSmoothLoss', label_smooth_val=0.2, num_classes=12),
         topk=(1, 5)))
 dataset_type = 'ImageNet'
 img_norm_cfg = dict(
@@ -46,9 +46,9 @@ data = dict(
     samples_per_gpu=16,
     workers_per_gpu=1,
     train=dict(
-        type='FiveFlower',
-        data_prefix='',
-        ann_file='/home/hangyuan/nx/code/MMCV/datasets/flowers/train.txt',
+        type='Visda',
+        data_prefix='/home/hangyuan/nx/code/VisDA/deep-transfer-learning/UDA/pytorch1.0/DSAN/dataset/visda/train',
+        # ann_file='/home/hangyuan/nx/code/MMCV/datasets/flowers/train.txt',
         pipeline=[
             dict(type='LoadImageFromFile'),
             dict(type='RandomResizedCrop', size=224),
@@ -63,9 +63,9 @@ data = dict(
             dict(type='Collect', keys=['img', 'gt_label'])
         ]),
     val=dict(
-        type='FiveFlower',
-        data_prefix='',
-        ann_file='/home/hangyuan/nx/code/MMCV/datasets/flowers/val.txt',
+        type='Visda',
+        data_prefix='/home/hangyuan/nx/code/VisDA/deep-transfer-learning/UDA/pytorch1.0/DSAN/dataset/visda/validation',
+        #ann_file='',
         pipeline=[
             dict(type='LoadImageFromFile'),
             dict(type='Resize', size=(256, -1)),
@@ -79,9 +79,9 @@ data = dict(
             dict(type='Collect', keys=['img'])
         ]),
     test=dict(
-        type='FiveFlower',
-        data_prefix='',
-        ann_file='/home/hangyuan/nx/code/MMCV/datasets/flowers/test.txt',
+        type='Visda',
+        data_prefix='/home/hangyuan/nx/code/VisDA/deep-transfer-learning/UDA/pytorch1.0/DSAN/dataset/visda/validation',
+        #ann_file='',
         pipeline=[
             dict(type='LoadImageFromFile'),
             dict(type='Resize', size=(256, -1)),

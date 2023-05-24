@@ -15,6 +15,7 @@ from .samplers import DistributedSampler, RepeatAugSampler
 from .stanford_cars import StanfordCars
 from .voc import VOC
 from .fiveflower import FiveFlower
+from .visda import Visda
 
 __all__ = [
     'BaseDataset', 'ImageNet', 'CIFAR10', 'CIFAR100', 'MNIST', 'FashionMNIST',
@@ -22,5 +23,5 @@ __all__ = [
     'DistributedSampler', 'ConcatDataset', 'RepeatDataset',
     'ClassBalancedDataset', 'DATASETS', 'PIPELINES', 'ImageNet21k', 'SAMPLERS',
     'build_sampler', 'RepeatAugSampler', 'KFoldDataset', 'CUB',
-    'CustomDataset', 'StanfordCars', 'FiveFlower'
+    'CustomDataset', 'StanfordCars', 'FiveFlower', 'Visda'
 ]

@@ -6,7 +6,7 @@ from .custom import CustomDataset
 
 
 @DATASETS.register_module()
-class FiveFlower(CustomDataset):
+class Visda(CustomDataset):
     """`ImageNet <http://www.image-net.org>`_ Dataset.
 
     The dataset supports two kinds of annotation format. More details can be
@@ -39,7 +39,8 @@ class FiveFlower(CustomDataset):
     """  # noqa: E501
 
     IMG_EXTENSIONS = ('.jpg', '.jpeg', '.png', '.ppm', '.bmp', '.pgm', '.tif')
-    CLASSES = ['daisy', 'rose', 'tulip', 'dandelion', 'sunflower']
+    CLASSES = ['aeroplane',  'bicycle',  'bus',  'car',  'horse',  'knife',  'motorcycle',  'person',  'plant',
+               'skateboard',  'train',  'truck']
 
     def __init__(self,
                  data_prefix: str,
